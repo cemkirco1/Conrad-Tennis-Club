@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+<rect width="1200" height="800" fill="#1F4A3A"/>
+<g fill="#2D5A45"><circle cx="40" cy="60" r="90"/><circle cx="160" cy="20" r="80"/><circle cx="1150" cy="760" r="110"/><circle cx="1040" cy="800" r="80"/><circle cx="60" cy="760" r="90"/></g>
+<rect x="110" y="120" width="980" height="560" fill="#B9582F"/>
+<g fill="#A9492A" opacity="0.5"><rect x="110" y="120" width="980" height="40"/><rect x="110" y="640" width="980" height="40"/></g>
+<g fill="none" stroke="#F6EEE2" stroke-width="7">
+<rect x="170" y="180" width="860" height="440"/>
+<line x1="170" y1="235" x2="1030" y2="235"/><line x1="170" y1="565" x2="1030" y2="565"/>
+<line x1="365" y1="235" x2="365" y2="565"/><line x1="835" y1="235" x2="835" y2="565"/>
+<line x1="365" y1="400" x2="835" y2="400"/>
+<line x1="170" y1="400" x2="190" y2="400"/><line x1="1010" y1="400" x2="1030" y2="400"/>
+</g>
+<rect x="596" y="160" width="10" height="480" fill="#10231C"/>
+<g stroke="#F6EEE2" stroke-width="3" opacity="0.35"><path d="M300 300 C 420 260 520 280 600 330" fill="none" stroke-dasharray="3 12"/></g>
+<ellipse cx="872" cy="486" rx="16" ry="6" fill="#5E2410" opacity="0.4"/>
+<circle cx="862" cy="474" r="16" fill="#D6E04A" stroke="#AEB832" stroke-width="3"/>
+<g fill="#F3ECE1" opacity="0.5"><path d="M280 460c10-6 26-6 34 2" stroke="#F3ECE1" stroke-width="3" fill="none"/></g>
+</svg>

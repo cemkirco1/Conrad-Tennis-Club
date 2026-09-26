@@ -16,3 +16,7 @@ Tüm butonlar `https://wa.me/905335712858?text=...` bağlantısıyla, pakete öz
 - `design-v2/Main.dc.html` — yenilenmiş, duyarlı (responsive) tek sayfa; kaydırdıkça arka planda raket topa vurur, fiyat bilgisi yok, Instagram görselleri için yer tutucular.
 
 Canlı canvas (v2): https://claude.ai/artifact/5GKQroo7m1Em9BHZt3Q7cJ
+
+## React sitesi
+
+`web/` klasöründe v2 tasarımının Vite + React ile yazılmış, yayına hazır hali var. Detaylar: [web/README.md](web/README.md)
