@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Conrad Tennis Club — Ana Sayfa</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;color:#15231E;background:#F5EFE6}
+a{color:#1D4D3B;text-decoration:none}a:hover{color:#0F3326}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0}
+p{margin:0}
+</style>
+</helmet>
+<div style="width: 1440px; height: 5200px; box-sizing: border-box; display: flex; flex-direction: column; background: #F5EFE6; color: #15231E; position: relative">
+
+<!-- NAV -->
+<header style="height: 96px; box-sizing: border-box; padding: 0 80px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #E4DACB">
+<a href="#top" style="display: flex; align-items: center; gap: 14px; color: #15231E">
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="{{accent}}" stroke-width="2.5"></circle><path d="M6 12c8 4 8 12 0 16" stroke="{{accent}}" stroke-width="2.5"></path><path d="M34 12c-8 4-8 12 0 16" stroke="{{accent}}" stroke-width="2.5"></path></svg>
+<div style="display: flex; flex-direction: column; line-height: 1.05">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 22px; font-weight: 600; letter-spacing: 0.5px">Conrad</span>
+<span style="font-size: 11px; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase; color: #56625C">Tennis Club</span>
+</div>
+</a>
+<nav style="display: flex; gap: 40px; font-size: 15px; font-weight: 600" aria-label="Ana menü">
+<a href="#dersler" style="color: #15231E">Dersler</a>
+<a href="#egitimler" style="color: #15231E">Eğitimler</a>
+<a href="#kiralama" style="color: #15231E">Kort Kiralama</a>
+<a href="#iletisim" style="color: #15231E">İletişim</a>
+</nav>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Conrad%20Tennis%20Club%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 22px; border-radius: 999px; background: #1D4D3B; color: #FFFFFF; font-size: 15px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg>
+WhatsApp'tan Yaz
+</a>
+</header>
+
+<!-- HERO -->
+<section id="top" style="height: 760px; box-sizing: border-box; padding: 72px 80px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px">
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 32px; padding-bottom: 72px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">Conrad Istanbul Bosphorus · Beşiktaş</span>
+<h1 style="font-size: 76px; line-height: 1.02; letter-spacing: -1.5px">Şehrin ortasında, yeşilin içinde toprak kortta tenis.</h1>
+<p style="font-size: 20px; line-height: 1.55; color: #56625C; max-width: 540px">Profesyonel antrenörlerle özel dersler, çocuk ve yetişkin eğitim programları, esnek kort kiralama paketleri. Size uygun olanı seçin, WhatsApp'tan yazın — gerisini biz planlayalım.</p>
+<div style="display: flex; gap: 16px; align-items: center">
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20tenis%20dersi%20almak%20istiyorum.%20Uygun%20saatler%20hakkında%20bilgi%20alabilir%20miyim%3F" style="display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 30px; border-radius: 999px; background: #1D4D3B; color: #FFFFFF; font-size: 17px; font-weight: 700">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg>
+Ders için WhatsApp
+</a>
+<a href="#kiralama" style="display: flex; align-items: center; height: 60px; padding: 0 28px; border-radius: 999px; border: 1.5px solid #15231E; color: #15231E; font-size: 17px; font-weight: 700">Paketleri Gör</a>
+</div>
+</div>
+<div style="position: relative; display: flex; justify-content: center; align-items: flex-start">
+<div style="position: relative; width: 460px; height: 688px; border-radius: 28px 28px 0 0; background: {{accent}}; overflow: hidden">
+<div style="position: absolute; left: 80px; top: 40px; width: 300px; height: 650px; box-sizing: border-box; border: 3px solid #FBF4EA"></div>
+<div style="position: absolute; left: 117px; top: 40px; width: 3px; height: 650px; background: #FBF4EA"></div>
+<div style="position: absolute; left: 340px; top: 40px; width: 3px; height: 650px; background: #FBF4EA"></div>
+<div style="position: absolute; left: 117px; top: 190px; width: 226px; height: 3px; background: #FBF4EA"></div>
+<div style="position: absolute; left: 117px; top: 540px; width: 226px; height: 3px; background: #FBF4EA"></div>
+<div style="position: absolute; left: 229px; top: 190px; width: 3px; height: 353px; background: #FBF4EA"></div>
+<div style="position: absolute; left: 60px; top: 362px; width: 340px; height: 6px; border-radius: 3px; background: #15231E"></div>
+<div style="position: absolute; left: 229px; top: 43px; width: 3px; height: 12px; background: #FBF4EA"></div>
+<div style="position: absolute; left: 290px; top: 250px; width: 26px; height: 26px; border-radius: 50%; background: #D9E36A; border: 2px solid #C3CD52"></div>
+</div>
+<div style="position: absolute; left: 0px; bottom: 96px; width: 260px; box-sizing: border-box; padding: 22px 24px; border-radius: 18px; background: #FFFFFF; box-shadow: 0 18px 40px rgba(21,35,30,0.14); display: flex; flex-direction: column; gap: 6px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #56625C">Zemin</span>
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 600">Toprak kort</span>
+<span style="font-size: 14px; color: #56625C; line-height: 1.45">Uluslararası standartlarda, dizlere dost oyun yüzeyi.</span>
+</div>
+</div>
+</section>
+
+<!-- FACTS STRIP -->
+<section style="background: #15231E; color: #F5EFE6; padding: 44px 80px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 26px">Profesyonel antrenörler</span>
+<span style="font-size: 15px; color: #B9C3BE">Seviyenize göre kişisel program</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 26px">Çocuk &amp; yetişkin</span>
+<span style="font-size: 15px; color: #B9C3BE">4 yaştan ileri seviyeye</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 26px">Hafta içi &amp; sonu</span>
+<span style="font-size: 15px; color: #B9C3BE">Esnek ders saatleri</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 26px">Beş yıldız standart</span>
+<span style="font-size: 15px; color: #B9C3BE">Conrad Istanbul güvencesiyle</span>
+</div>
+</section>
+
+<!-- DERSLER -->
+<section id="dersler" style="padding: 120px 80px; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">01 — Dersler</span>
+<h2 style="font-size: 56px; line-height: 1.05; letter-spacing: -1px">Özel tenis dersleri</h2>
+</div>
+<p style="font-size: 18px; line-height: 1.6; color: #56625C; max-width: 480px">İlk kez raket tutanlardan turnuva oyuncularına, her seviyeye birebir ilgi. Paketi seçin, WhatsApp'tan uygun saati birlikte ayarlayalım.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="box-sizing: border-box; padding: 36px; border-radius: 24px; background: #FFFFFF; border: 1px solid #E4DACB; display: flex; flex-direction: column; gap: 20px">
+<h3 style="font-size: 30px">Bireysel ders</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">Antrenörünüzle birebir, tamamen size odaklı 60 dakika. Teknikte en hızlı ilerleme.</p>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; font-weight: 500">
+<span>· 1 kişi · 60 dk</span>
+<span>· Tek ders veya 8 / 12'li paket</span>
+</div>
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 34px; margin-top: 4px">[FİYAT] <span style="font-family: 'Manrope', sans-serif; font-size: 15px; color: #56625C">/ ders</span></span>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20bireysel%20özel%20ders%20paketi%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; border-radius: 999px; background: #1D4D3B; color: #FFFFFF; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg>
+WhatsApp'tan Randevu
+</a>
+</div>
+<div style="box-sizing: border-box; padding: 36px; border-radius: 24px; background: #FFFFFF; border: 2px solid {{accent}}; display: flex; flex-direction: column; gap: 20px; position: relative">
+<span style="position: absolute; top: -15px; left: 36px; padding: 6px 14px; border-radius: 999px; background: {{accent}}; color: #FFFFFF; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase">En çok tercih edilen</span>
+<h3 style="font-size: 30px">İki kişilik ders</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">Eşiniz, arkadaşınız ya da çocuğunuzla birlikte. Ders ücretini paylaşın, oyun keyfini ikiye katlayın.</p>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; font-weight: 500">
+<span>· 2 kişi · 60 dk</span>
+<span>· Tek ders veya 8 / 12'li paket</span>
+</div>
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 34px; margin-top: 4px">[FİYAT] <span style="font-family: 'Manrope', sans-serif; font-size: 15px; color: #56625C">/ ders</span></span>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20iki%20kişilik%20ders%20paketi%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; border-radius: 999px; background: #1D4D3B; color: #FFFFFF; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg>
+WhatsApp'tan Randevu
+</a>
+</div>
+<div style="box-sizing: border-box; padding: 36px; border-radius: 24px; background: #FFFFFF; border: 1px solid #E4DACB; display: flex; flex-direction: column; gap: 20px">
+<h3 style="font-size: 30px">Grup dersi</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">Aynı seviyedeki 3–4 oyuncuyla, maç temposunda keyifli ve ekonomik antrenman.</p>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; font-weight: 500">
+<span>· 3–4 kişi · 90 dk</span>
+<span>· Aylık program</span>
+</div>
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 34px; margin-top: 4px">[FİYAT] <span style="font-family: 'Manrope', sans-serif; font-size: 15px; color: #56625C">/ kişi</span></span>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20grup%20dersleri%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; border-radius: 999px; background: #1D4D3B; color: #FFFFFF; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg>
+WhatsApp'tan Randevu
+</a>
+</div>
+</div>
+</section>
+
+<!-- EĞİTİMLER -->
+<section id="egitimler" style="padding: 120px 80px; background: #EDE4D6; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">02 — Eğitimler</span>
+<h2 style="font-size: 56px; line-height: 1.05; letter-spacing: -1px">Eğitim programları</h2>
+</div>
+<p style="font-size: 18px; line-height: 1.6; color: #56625C; max-width: 480px">Yaşa ve hedefe göre kurgulanmış dönemsel programlar. Kontenjanlar sınırlı — yer ayırtmak için yazmanız yeterli.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div style="box-sizing: border-box; padding: 40px; border-radius: 24px; background: #F5EFE6; display: flex; gap: 32px; align-items: flex-start">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 56px; line-height: 1; color: {{accent}}">A</span>
+<div style="display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+<h3 style="font-size: 30px">Çocuk Tenis Akademisi</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">4–14 yaş. Mini tenis ile başlayan, koordinasyonu ve oyun sevgisini geliştiren yaş gruplu eğitim.</p>
+<span style="font-size: 14px; font-weight: 600">Hafta içi akşam · Hafta sonu sabah</span>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Çocuk%20Tenis%20Akademisi%20hakkında%20bilgi%20almak%20istiyorum." style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 48px; padding: 0 20px; margin-top: 6px; border-radius: 999px; border: 1.5px solid #1D4D3B; color: #1D4D3B; font-size: 15px; font-weight: 700">Kayıt için WhatsApp →</a>
+</div>
+</div>
+<div style="box-sizing: border-box; padding: 40px; border-radius: 24px; background: #F5EFE6; display: flex; gap: 32px; align-items: flex-start">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 56px; line-height: 1; color: {{accent}}">B</span>
+<div style="display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+<h3 style="font-size: 30px">Yetişkin Başlangıç</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">Hiç oynamamış ya da yıllar sonra kortlara dönenler için temel vuruşlar, oyun kuralları ve ilk maçlar.</p>
+<span style="font-size: 14px; font-weight: 600">8 haftalık program</span>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Yetişkin%20Başlangıç%20programı%20hakkında%20bilgi%20almak%20istiyorum." style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 48px; padding: 0 20px; margin-top: 6px; border-radius: 999px; border: 1.5px solid #1D4D3B; color: #1D4D3B; font-size: 15px; font-weight: 700">Kayıt için WhatsApp →</a>
+</div>
+</div>
+<div style="box-sizing: border-box; padding: 40px; border-radius: 24px; background: #F5EFE6; display: flex; gap: 32px; align-items: flex-start">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 56px; line-height: 1; color: {{accent}}">C</span>
+<div style="display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+<h3 style="font-size: 30px">Cardio Tenis</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">Müzik eşliğinde, yüksek tempolu grup antrenmanı. Tenis vuruşlarıyla kardiyo; her seviyeye açık.</p>
+<span style="font-size: 14px; font-weight: 600">Yetişkin &amp; çocuk grupları</span>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Cardio%20Tenis%20grupları%20hakkında%20bilgi%20almak%20istiyorum." style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 48px; padding: 0 20px; margin-top: 6px; border-radius: 999px; border: 1.5px solid #1D4D3B; color: #1D4D3B; font-size: 15px; font-weight: 700">Kayıt için WhatsApp →</a>
+</div>
+</div>
+<div style="box-sizing: border-box; padding: 40px; border-radius: 24px; background: #F5EFE6; display: flex; gap: 32px; align-items: flex-start">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 56px; line-height: 1; color: {{accent}}">D</span>
+<div style="display: flex; flex-direction: column; gap: 14px; flex-grow: 1">
+<h3 style="font-size: 30px">Performans &amp; Turnuva</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">Lisanslı ve turnuva hedefli oyuncular için teknik, taktik ve maç analizi içeren yoğun program.</p>
+<span style="font-size: 14px; font-weight: 600">Seviye tespiti sonrası</span>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Performans%20%26%20Turnuva%20programı%20hakkında%20bilgi%20almak%20istiyorum." style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 48px; padding: 0 20px; margin-top: 6px; border-radius: 999px; border: 1.5px solid #1D4D3B; color: #1D4D3B; font-size: 15px; font-weight: 700">Kayıt için WhatsApp →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KORT KİRALAMA -->
+<section id="kiralama" style="padding: 120px 80px; background: #1D4D3B; color: #F5EFE6; display: flex; flex-direction: column; gap: 56px">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px">
+<div style="display: flex; flex-direction: column; gap: 16px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #F0B79E">03 — Kort Kiralama</span>
+<h2 style="font-size: 56px; line-height: 1.05; letter-spacing: -1px; color: #FFFFFF">Kortu ayırtın, oyuna gelin</h2>
+</div>
+<p style="font-size: 18px; line-height: 1.6; color: #C9D6CF; max-width: 480px">Kendi partnerinizle oynamak için saatlik kiralama ya da düzenli oyuncular için avantajlı paketler.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px">
+<div style="box-sizing: border-box; padding: 36px; border-radius: 24px; background: #245A46; border: 1px solid #3A6F5B; display: flex; flex-direction: column; gap: 18px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #C9D6CF">Tek seans</span>
+<h3 style="font-size: 30px; color: #FFFFFF">Saatlik kiralama</h3>
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 44px; color: #FFFFFF">[FİYAT]</span>
+<span style="font-size: 15px; color: #C9D6CF">/ saat · kort başına</span>
+<div style="height: 1px; background: #3A6F5B"></div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #E3EBE7">
+<span>· 60 dakika toprak kort</span>
+<span>· Soyunma odası kullanımı</span>
+<span>· Raket &amp; top kiralama opsiyonel</span>
+</div>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20saatlik%20kort%20kiralamak%20istiyorum.%20Tarih%20ve%20saat%3A%20" style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; margin-top: 8px; border-radius: 999px; background: #F5EFE6; color: #15231E; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg>
+Kort Ayırt
+</a>
+</div>
+<div style="box-sizing: border-box; padding: 36px; border-radius: 24px; background: #F5EFE6; color: #15231E; display: flex; flex-direction: column; gap: 18px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: {{accent}}">Avantajlı</span>
+<h3 style="font-size: 30px">10 saatlik paket</h3>
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 44px">[FİYAT]</span>
+<span style="font-size: 15px; color: #56625C">paket toplamı · [GEÇERLİLİK] geçerli</span>
+<div style="height: 1px; background: #E4DACB"></div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<span>· 10 × 60 dakika kort kullanımı</span>
+<span>· Öncelikli rezervasyon</span>
+<span>· Saatlik fiyata göre indirimli</span>
+</div>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%2010%20saatlik%20kort%20kiralama%20paketi%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; margin-top: 8px; border-radius: 999px; background: #1D4D3B; color: #FFFFFF; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg>
+Paketi Al
+</a>
+</div>
+<div style="box-sizing: border-box; padding: 36px; border-radius: 24px; background: #245A46; border: 1px solid #3A6F5B; display: flex; flex-direction: column; gap: 18px">
+<span style="font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #C9D6CF">Düzenli oyuncu</span>
+<h3 style="font-size: 30px; color: #FFFFFF">Sabit saat üyeliği</h3>
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 44px; color: #FFFFFF">[FİYAT]</span>
+<span style="font-size: 15px; color: #C9D6CF">/ ay · haftada 1 sabit saat</span>
+<div style="height: 1px; background: #3A6F5B"></div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #E3EBE7">
+<span>· Her hafta aynı gün ve saat sizin</span>
+<span>· Aylık 4–5 seans</span>
+<span>· Ek saatlerde üye fiyatı</span>
+</div>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20aylık%20sabit%20saat%20kort%20üyeliği%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; margin-top: 8px; border-radius: 999px; background: #F5EFE6; color: #15231E; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg>
+Üyelik Sor
+</a>
+</div>
+</div>
+</section>
+
+<!-- NASIL ÇALIŞIR -->
+<section style="padding: 120px 80px; display: flex; flex-direction: column; gap: 56px">
+<h2 style="font-size: 48px; line-height: 1.1; letter-spacing: -1px; text-align: center">Üç adımda kortta</h2>
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #15231E; padding-top: 28px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 40px; color: {{accent}}">1</span>
+<h3 style="font-size: 26px">Paketinizi seçin</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">Özel ders, eğitim programı ya da kort kiralama — size uygun olanı bulun.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #15231E; padding-top: 28px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 40px; color: {{accent}}">2</span>
+<h3 style="font-size: 26px">WhatsApp'tan yazın</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">Butona dokunun; mesajınız hazır gelir. Gönderin, uygun saatleri paylaşalım.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 14px; border-top: 2px solid #15231E; padding-top: 28px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 40px; color: {{accent}}">3</span>
+<h3 style="font-size: 26px">Kortta buluşalım</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #56625C">Rezervasyonunuz onaylanır; raketinizi alın ve gelin.</p>
+</div>
+</div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="iletisim" style="flex-grow: 1; padding: 0 80px 100px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px">
+<div style="box-sizing: border-box; padding: 56px; border-radius: 28px; background: {{accent}}; color: #FFFFFF; display: flex; flex-direction: column; justify-content: space-between; gap: 32px">
+<h2 style="font-size: 52px; line-height: 1.05; letter-spacing: -1px; color: #FFFFFF">Sorunuz mu var? Bir mesaj uzağınızdayız.</h2>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Conrad%20Tennis%20Club%20hakkında%20bilgi%20almak%20istiyorum." style="align-self: flex-start; display: flex; align-items: center; gap: 12px; height: 60px; padding: 0 30px; border-radius: 999px; background: #FFFFFF; color: #15231E; font-size: 17px; font-weight: 700">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5"></path></svg>
+WhatsApp'tan Yazın
+</a>
+</div>
+<div style="box-sizing: border-box; padding: 56px; border-radius: 28px; background: #FFFFFF; border: 1px solid #E4DACB; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 36px 32px; align-content: center">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #56625C">Adres</span>
+<span style="font-size: 17px; line-height: 1.5; font-weight: 500">Conrad Istanbul Bosphorus<br>Cihannüma Mah., Beşiktaş<br>İstanbul</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #56625C">Telefon / WhatsApp</span>
+<a href="tel:+905335712858" style="font-size: 17px; font-weight: 600">+90 533 571 28 58</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #56625C">Çalışma saatleri</span>
+<span style="font-size: 17px; line-height: 1.5; font-weight: 500">[HAFTA İÇİ SAATLERİ]<br>[HAFTA SONU SAATLERİ]</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: #56625C">Instagram</span>
+<a href="https://www.instagram.com/conradtennisclub/" style="font-size: 17px; font-weight: 600">@conradtennisclub</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="height: 96px; box-sizing: border-box; padding: 0 80px; background: #15231E; color: #B9C3BE; display: flex; align-items: center; justify-content: space-between; font-size: 14px">
+<span>© 2026 Conrad Tennis Club · Beşiktaş, İstanbul</span>
+<div style="display: flex; gap: 28px">
+<a href="#dersler" style="color: #E3EBE7">Dersler</a>
+<a href="#egitimler" style="color: #E3EBE7">Eğitimler</a>
+<a href="#kiralama" style="color: #E3EBE7">Kort Kiralama</a>
+<a href="https://www.instagram.com/conradtennisclub/" style="color: #E3EBE7">Instagram</a>
+</div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#B4522D","options":["#B4522D","#A8472A","#C0673A","#1F3A4D"]},"wa":{"editor":"text","default":"905335712858"},"$preview":{"width":1440,"height":5200}}'>
+class Component extends DCLogic {
+renderVals() {
+return {
+accent: this.props.accent ?? '#B4522D',
+wa: (this.props.wa ?? '905335712858').replace(/\D/g, '')
+};
+}
+}
+</script>
+</body>
+</html>
