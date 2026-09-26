@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F4E6CF"/><stop offset="1" stop-color="#E9D3B2"/></linearGradient>
+<linearGradient id="clay" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B9582F"/><stop offset="1" stop-color="#CF7446"/></linearGradient>
+<radialGradient id="sun" cx="0.78" cy="0.12" r="0.5"><stop offset="0" stop-color="#FFF6E3" stop-opacity="0.9"/><stop offset="1" stop-color="#FFF6E3" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="1000" fill="url(#sky)"/>
+<rect width="1200" height="1000" fill="url(#sun)"/>
+<g fill="#2D5A45"><circle cx="80" cy="330" r="130"/><circle cx="250" cy="300" r="120"/><circle cx="420" cy="320" r="110"/><circle cx="600" cy="290" r="130"/><circle cx="790" cy="315" r="115"/><circle cx="960" cy="295" r="125"/><circle cx="1140" cy="320" r="120"/></g>
+<g fill="#1F4A3A"><circle cx="160" cy="380" r="110"/><circle cx="340" cy="375" r="100"/><circle cx="520" cy="385" r="105"/><circle cx="700" cy="370" r="110"/><circle cx="880" cy="385" r="100"/><circle cx="1060" cy="375" r="110"/></g>
+<rect y="400" width="1200" height="90" fill="#16382B"/>
+<g stroke="#2F5A48" stroke-width="2"><line x1="0" y1="420" x2="1200" y2="420"/><line x1="0" y1="445" x2="1200" y2="445"/><line x1="0" y1="470" x2="1200" y2="470"/></g>
+<rect y="490" width="1200" height="510" fill="url(#clay)"/>
+<g fill="none" stroke="#F6EEE2" stroke-width="7" stroke-linejoin="round">
+<polygon points="330,520 870,520 1160,1000 40,1000"/>
+<line x1="385" y1="520" x2="180" y2="1000"/><line x1="815" y1="520" x2="1020" y2="1000"/>
+<line x1="265" y1="700" x2="935" y2="700"/>
+<line x1="600" y1="700" x2="600" y2="1000"/>
+</g>
+<rect x="300" y="596" width="600" height="8" fill="#10231C"/>
+<g stroke="#10231C" stroke-width="1.5" opacity="0.55">
+<line x1="300" y1="560" x2="900" y2="560"/><line x1="300" y1="572" x2="900" y2="572"/><line x1="300" y1="584" x2="900" y2="584"/>
+</g>
+<rect x="300" y="548" width="600" height="8" fill="#F6EEE2"/>
+<rect x="292" y="548" width="8" height="56" fill="#10231C"/><rect x="900" y="548" width="8" height="56" fill="#10231C"/>
+<ellipse cx="770" cy="880" rx="26" ry="8" fill="#8A3A1C" opacity="0.35"/>
+<circle cx="740" cy="760" r="24" fill="#D6E04A" stroke="#AEB832" stroke-width="3"/>
+<path d="M722 748c8 5 8 18 0 24" stroke="#FBF8EE" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>
