@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<title>Conrad Tennis Club</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Manrope',system-ui,sans-serif;color:#10231C;background:#F3ECE1;-webkit-font-smoothing:antialiased}
+a{color:#16382B;text-decoration:none}a:hover{color:#B4522D}
+h1,h2,h3{font-family:'Fraunces',Georgia,serif;font-weight:600;margin:0}
+p{margin:0}
+html{scroll-behavior:smooth}
+.wrap{max-width:1280px;margin:0 auto;padding-left:80px;padding-right:80px;box-sizing:border-box;width:100%}
+.h1{font-size:88px;line-height:0.98;letter-spacing:-2px}
+.h2{font-size:60px;line-height:1.02;letter-spacing:-1.2px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.gal{grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px}
+.tall{grid-row:span 2}
+.wide{grid-column:span 2}
+.ph{background-color:#E4D8C4;background-image:repeating-linear-gradient(135deg,rgba(22,56,43,.07) 0 2px,transparent 2px 16px)}
+.lift{transition:transform .25s ease, box-shadow .25s ease}
+.lift:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(16,35,28,.14)}
+.btn{transition:transform .2s ease, background-color .2s ease}
+.btn:hover{transform:translateY(-2px)}
+@media (max-width:900px){
+.wrap{padding-left:20px !important;padding-right:20px !important}
+.h1{font-size:50px !important;letter-spacing:-1px !important}
+.h2{font-size:40px !important;letter-spacing:-.6px !important}
+.g2,.g3,.g4{grid-template-columns:minmax(0,1fr) !important}
+.gal{grid-template-columns:repeat(2,minmax(0,1fr)) !important;grid-auto-rows:160px !important}
+.hide-m{display:none !important}
+.stack-m{flex-direction:column !important;align-items:stretch !important}
+.pad-m{padding-top:72px !important;padding-bottom:72px !important}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lift,.btn{transition:none}}
+</style>
+</helmet>
+<div style="width: 100%; min-height: 100vh; position: relative; background: #F3ECE1; color: #10231C; overflow-x: hidden">
+
+<!-- ARKA PLAN: kaydırdıkça topa vuran raket -->
+<div aria-hidden="true" style="position: fixed; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden">
+<div style="position: absolute; left: 0; top: 0; width: 200px; height: 520px; transform-origin: 100px 510px; transform: translate({{rx}}px, {{ry}}px) rotate({{ra}}deg) scale({{rs}}); opacity: 0.3">
+<svg width="200" height="520" viewBox="0 0 200 520" fill="none">
+<defs><clipPath id="ctc-head"><ellipse cx="100" cy="135" rx="78" ry="108"></ellipse></clipPath></defs>
+<g clip-path="url(#ctc-head)" stroke="#16382B" stroke-width="2.2">
+<line x1="36" y1="0" x2="36" y2="260"></line><line x1="52" y1="0" x2="52" y2="260"></line><line x1="68" y1="0" x2="68" y2="260"></line><line x1="84" y1="0" x2="84" y2="260"></line><line x1="100" y1="0" x2="100" y2="260"></line><line x1="116" y1="0" x2="116" y2="260"></line><line x1="132" y1="0" x2="132" y2="260"></line><line x1="148" y1="0" x2="148" y2="260"></line><line x1="164" y1="0" x2="164" y2="260"></line>
+<line x1="0" y1="45" x2="200" y2="45"></line><line x1="0" y1="63" x2="200" y2="63"></line><line x1="0" y1="81" x2="200" y2="81"></line><line x1="0" y1="99" x2="200" y2="99"></line><line x1="0" y1="117" x2="200" y2="117"></line><line x1="0" y1="135" x2="200" y2="135"></line><line x1="0" y1="153" x2="200" y2="153"></line><line x1="0" y1="171" x2="200" y2="171"></line><line x1="0" y1="189" x2="200" y2="189"></line><line x1="0" y1="207" x2="200" y2="207"></line><line x1="0" y1="225" x2="200" y2="225"></line>
+</g>
+<ellipse cx="100" cy="135" rx="84" ry="115" stroke="#16382B" stroke-width="11"></ellipse>
+<path d="M42 222 L92 330 M158 222 L108 330" stroke="#16382B" stroke-width="10" stroke-linecap="round"></path>
+<rect x="87" y="322" width="26" height="190" rx="11" fill="{{accent}}"></rect>
+<path d="M87 360 L113 350 M87 390 L113 380 M87 420 L113 410 M87 450 L113 440 M87 480 L113 470" stroke="#F3ECE1" stroke-width="3"></path>
+</svg>
+</div>
+<div style="position: absolute; left: 0; top: 0; width: 80px; height: 80px; border-radius: 50%; border: 3px solid {{accent}}; box-sizing: border-box; transform: translate({{fx}}px, {{fy}}px) scale({{fsc}}); opacity: {{fo}}"></div>
+<div style="position: absolute; left: 0; top: 0; width: 44px; height: 44px; transform: translate({{bx}}px, {{by}}px) rotate({{spin}}deg) scale({{rs}})">
+<svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+<circle cx="22" cy="22" r="20" fill="#D6E04A" stroke="#AEB832" stroke-width="2"></circle>
+<path d="M5 13c8 4 8 14 0 18" stroke="#FBF8EE" stroke-width="2.6" stroke-linecap="round"></path>
+<path d="M39 13c-8 4-8 14 0 18" stroke="#FBF8EE" stroke-width="2.6" stroke-linecap="round"></path>
+</svg>
+</div>
+</div>
+
+<div style="position: relative; z-index: 1">
+
+<!-- NAV -->
+<header style="position: sticky; top: 0; z-index: 10; background: rgba(243,236,225,0.86); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #E3D8C6">
+<div class="wrap" style="height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+<a href="#top" style="display: flex; align-items: center; gap: 12px; color: #10231C">
+<svg width="38" height="38" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#D6E04A" stroke="#16382B" stroke-width="2"></circle><path d="M6 12c8 4 8 12 0 16" stroke="#16382B" stroke-width="2"></path><path d="M34 12c-8 4-8 12 0 16" stroke="#16382B" stroke-width="2"></path></svg>
+<span style="display: flex; flex-direction: column; line-height: 1">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 22px; font-weight: 600">Conrad</span>
+<span style="font-size: 10px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; color: #55625B; margin-top: 3px">Tennis Club</span>
+</span>
+</a>
+<nav class="hide-m" style="display: flex; gap: 36px; font-size: 15px; font-weight: 600" aria-label="Ana menü">
+<a href="#dersler">Dersler</a>
+<a href="#egitimler">Eğitimler</a>
+<a href="#kiralama">Kort Kiralama</a>
+<a href="#galeri">Galeri</a>
+<a href="#iletisim">İletişim</a>
+</nav>
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%20Conrad%20Tennis%20Club%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 22px; border-radius: 999px; background: #16382B; color: #FFFFFF; font-size: 15px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+WhatsApp
+</a>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="top" class="pad-m" style="padding: 88px 0 112px">
+<div class="wrap g2" style="display: grid; gap: 64px; align-items: center">
+<div style="display: flex; flex-direction: column; gap: 30px">
+<span style="align-self: flex-start; display: flex; align-items: center; gap: 10px; padding: 8px 16px 8px 10px; border-radius: 999px; background: #FFFDF8; border: 1px solid #E3D8C6; font-size: 13px; font-weight: 700; color: #16382B">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #D6E04A; border: 2px solid #AEB832"></span>
+Conrad Istanbul Bosphorus · Beşiktaş
+</span>
+<h1 class="h1">Şehrin ortasında, <em style="font-style: italic; font-weight: 400; color: {{accent}}">toprak kortta</em> tenis.</h1>
+<p style="font-size: 20px; line-height: 1.6; color: #55625B; max-width: 520px">Profesyonel antrenörlerle özel dersler, çocuk ve yetişkin eğitim programları, esnek kort kiralama. Size uygun olanı seçin, WhatsApp'tan yazın — gerisini biz planlayalım.</p>
+<div class="stack-m" style="display: flex; gap: 14px; align-items: center">
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%20tenis%20dersi%20almak%20istiyorum.%20Uygun%20saatler%20hakkında%20bilgi%20alabilir%20miyim%3F" style="display: flex; align-items: center; justify-content: center; gap: 12px; height: 62px; padding: 0 32px; border-radius: 999px; background: #16382B; color: #FFFFFF; font-size: 17px; font-weight: 700; box-shadow: 0 14px 30px rgba(22,56,43,.25)">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+Ders için WhatsApp
+</a>
+<a class="btn" href="#kiralama" style="display: flex; align-items: center; justify-content: center; height: 62px; padding: 0 30px; border-radius: 999px; border: 1.5px solid #10231C; color: #10231C; font-size: 17px; font-weight: 700">Kort Kiralama</a>
+</div>
+<div style="display: flex; gap: 28px; flex-wrap: wrap; padding-top: 8px; font-size: 14px; font-weight: 600; color: #55625B">
+<span>Profesyonel antrenörler</span>
+<span>Çocuk &amp; yetişkin</span>
+<span>Hafta içi &amp; hafta sonu</span>
+</div>
+</div>
+<div style="position: relative; height: 600px">
+<div class="ph" style="position: absolute; right: 0; top: 0; width: 82%; height: 520px; border-radius: 36px; overflow: hidden; display: flex; align-items: flex-end; padding: 24px; box-sizing: border-box">
+<span style="padding: 8px 14px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 13px; font-weight: 700; color: #16382B">Instagram görseli · Kortlar</span>
+</div>
+<div class="ph" style="position: absolute; left: 0; bottom: 0; width: 46%; height: 250px; border-radius: 28px; border: 8px solid #F3ECE1; box-sizing: border-box; display: flex; align-items: flex-end; padding: 16px">
+<span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli · Ders anı</span>
+</div>
+<div style="position: absolute; right: 24px; bottom: 36px; padding: 18px 22px; border-radius: 20px; background: #16382B; color: #F3ECE1; display: flex; flex-direction: column; gap: 4px; box-shadow: 0 20px 40px rgba(16,35,28,.25)">
+<span style="font-size: 11px; font-weight: 800; letter-spacing: 2.5px; text-transform: uppercase; color: #D6E04A">Zemin</span>
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 24px">Toprak kort</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- BANT -->
+<div style="background: {{accent}}; color: #FFFFFF; transform: rotate(-1.5deg); margin: 0 -40px; box-shadow: 0 10px 30px rgba(180,82,45,.25)">
+<div style="display: flex; justify-content: center; align-items: center; gap: 36px; height: 76px; white-space: nowrap; overflow: hidden; font-family: 'Fraunces', Georgia, serif; font-size: 28px; font-style: italic">
+<span>Özel Ders</span><span style="width: 12px; height: 12px; border-radius: 50%; background: #D6E04A; flex-shrink: 0"></span>
+<span>Çocuk Akademisi</span><span style="width: 12px; height: 12px; border-radius: 50%; background: #D6E04A; flex-shrink: 0"></span>
+<span>Cardio Tenis</span><span style="width: 12px; height: 12px; border-radius: 50%; background: #D6E04A; flex-shrink: 0"></span>
+<span>Kort Kiralama</span><span style="width: 12px; height: 12px; border-radius: 50%; background: #D6E04A; flex-shrink: 0"></span>
+<span>Turnuva Hazırlık</span><span style="width: 12px; height: 12px; border-radius: 50%; background: #D6E04A; flex-shrink: 0"></span>
+<span>Özel Ders</span>
+</div>
+</div>
+
+<!-- DERSLER -->
+<section id="dersler" class="pad-m" style="padding: 140px 0 120px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+<div class="stack-m" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">01 — Dersler</span>
+<h2 class="h2">Özel tenis <em style="font-style: italic; font-weight: 400">dersleri</em></h2>
+</div>
+<p style="font-size: 18px; line-height: 1.6; color: #55625B; max-width: 440px">İlk kez raket tutanlardan turnuva oyuncularına, her seviyeye birebir ilgi. Dersi seçin, uygun saati WhatsApp'tan birlikte ayarlayalım.</p>
+</div>
+<div class="g3" style="display: grid; gap: 24px">
+<div class="lift" style="padding: 36px; border-radius: 28px; background: #FFFDF8; border: 1px solid #E3D8C6; display: flex; flex-direction: column; gap: 18px">
+<div style="width: 56px; height: 56px; border-radius: 18px; background: #F3ECE1; display: flex; align-items: center; justify-content: center; color: #16382B">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="7" r="4"></circle><path d="M4 21c1-4 4.5-6 8-6s7 2 8 6"></path></svg>
+</div>
+<h3 style="font-size: 30px">Bireysel ders</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #55625B">Antrenörünüzle birebir, tamamen size odaklı 60 dakika. Teknikte en hızlı ilerleme.</p>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3ECE1; font-size: 13px; font-weight: 600">1 kişi</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3ECE1; font-size: 13px; font-weight: 600">60 dk</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3ECE1; font-size: 13px; font-weight: 600">8 / 12'li paket</span>
+</div>
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%20bireysel%20özel%20ders%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; margin-top: 8px; border-radius: 999px; background: #16382B; color: #FFFFFF; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+Bilgi &amp; Randevu
+</a>
+</div>
+<div class="lift" style="padding: 36px; border-radius: 28px; background: #16382B; color: #F3ECE1; display: flex; flex-direction: column; gap: 18px; position: relative">
+<span style="position: absolute; top: 28px; right: 28px; padding: 6px 12px; border-radius: 999px; background: #D6E04A; color: #10231C; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase">Favori</span>
+<div style="width: 56px; height: 56px; border-radius: 18px; background: #224A3A; display: flex; align-items: center; justify-content: center; color: #D6E04A">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="8" cy="8" r="3.2"></circle><circle cx="16.5" cy="8" r="3.2"></circle><path d="M2 20c.7-3.2 3-5 6-5s5.3 1.8 6 5"></path><path d="M14.5 15.2c.6-.1 1.3-.2 2-.2 3 0 5.3 1.8 6 5"></path></svg>
+</div>
+<h3 style="font-size: 30px; color: #FFFFFF">İki kişilik ders</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #C8D5CE">Eşiniz, arkadaşınız ya da çocuğunuzla birlikte. Aynı kortta, aynı antrenörle, oyun keyfi ikiye katlanır.</p>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="padding: 6px 12px; border-radius: 999px; background: #224A3A; font-size: 13px; font-weight: 600">2 kişi</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #224A3A; font-size: 13px; font-weight: 600">60 dk</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #224A3A; font-size: 13px; font-weight: 600">8 / 12'li paket</span>
+</div>
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%20iki%20kişilik%20ders%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; margin-top: 8px; border-radius: 999px; background: #D6E04A; color: #10231C; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+Bilgi &amp; Randevu
+</a>
+</div>
+<div class="lift" style="padding: 36px; border-radius: 28px; background: #FFFDF8; border: 1px solid #E3D8C6; display: flex; flex-direction: column; gap: 18px">
+<div style="width: 56px; height: 56px; border-radius: 18px; background: #F3ECE1; display: flex; align-items: center; justify-content: center; color: #16382B">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="6" cy="9" r="2.6"></circle><circle cx="12" cy="7" r="2.6"></circle><circle cx="18" cy="9" r="2.6"></circle><path d="M2 19c.5-2.5 2-4 4-4M22 19c-.5-2.5-2-4-4-4M7.5 20c.6-3 2.4-5 4.5-5s3.9 2 4.5 5"></path></svg>
+</div>
+<h3 style="font-size: 30px">Grup dersi</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #55625B">Aynı seviyedeki 3–4 oyuncuyla, maç temposunda keyifli antrenman ve yeni oyun arkadaşları.</p>
+<div style="display: flex; gap: 8px; flex-wrap: wrap">
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3ECE1; font-size: 13px; font-weight: 600">3–4 kişi</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3ECE1; font-size: 13px; font-weight: 600">90 dk</span>
+<span style="padding: 6px 12px; border-radius: 999px; background: #F3ECE1; font-size: 13px; font-weight: 600">Aylık program</span>
+</div>
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%20grup%20dersleri%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; margin-top: 8px; border-radius: 999px; background: #16382B; color: #FFFFFF; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+Bilgi &amp; Randevu
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- EĞİTİMLER -->
+<section id="egitimler" class="pad-m" style="padding: 120px 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+<div class="stack-m" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">02 — Eğitimler</span>
+<h2 class="h2">Eğitim <em style="font-style: italic; font-weight: 400">programları</em></h2>
+</div>
+<p style="font-size: 18px; line-height: 1.6; color: #55625B; max-width: 440px">Yaşa ve hedefe göre kurgulanmış dönemsel programlar. Kontenjanlar sınırlı — yer ayırtmak için bir mesaj yeterli.</p>
+</div>
+<div class="g2" style="display: grid; gap: 24px">
+<div class="lift" style="border-radius: 28px; background: #FFFDF8; border: 1px solid #E3D8C6; overflow: hidden; display: flex; flex-direction: column">
+<div class="ph" style="height: 200px; display: flex; align-items: flex-end; padding: 18px; box-sizing: border-box">
+<span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli · Çocuk grubu</span>
+</div>
+<div style="padding: 32px 36px 36px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: {{accent}}">4–14 yaş</span>
+<h3 style="font-size: 30px">Çocuk Tenis Akademisi</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #55625B">Mini tenis ile başlayan; koordinasyonu, özgüveni ve oyun sevgisini geliştiren yaş gruplu eğitim.</p>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Çocuk%20Tenis%20Akademisi%20hakkında%20bilgi%20almak%20istiyorum." style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 48px; margin-top: 6px; font-size: 16px; font-weight: 700; border-bottom: 2px solid #D6E04A">Kayıt için WhatsApp →</a>
+</div>
+</div>
+<div class="lift" style="border-radius: 28px; background: #FFFDF8; border: 1px solid #E3D8C6; overflow: hidden; display: flex; flex-direction: column">
+<div class="ph" style="height: 200px; display: flex; align-items: flex-end; padding: 18px; box-sizing: border-box">
+<span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli · Yetişkin dersi</span>
+</div>
+<div style="padding: 32px 36px 36px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: {{accent}}">8 hafta</span>
+<h3 style="font-size: 30px">Yetişkin Başlangıç</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #55625B">Hiç oynamamış ya da yıllar sonra kortlara dönenler için temel vuruşlar, oyun kuralları ve ilk maçlar.</p>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Yetişkin%20Başlangıç%20programı%20hakkında%20bilgi%20almak%20istiyorum." style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 48px; margin-top: 6px; font-size: 16px; font-weight: 700; border-bottom: 2px solid #D6E04A">Kayıt için WhatsApp →</a>
+</div>
+</div>
+<div class="lift" style="border-radius: 28px; background: #FFFDF8; border: 1px solid #E3D8C6; overflow: hidden; display: flex; flex-direction: column">
+<div class="ph" style="height: 200px; display: flex; align-items: flex-end; padding: 18px; box-sizing: border-box">
+<span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli · Cardio Tenis</span>
+</div>
+<div style="padding: 32px 36px 36px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: {{accent}}">Yetişkin &amp; çocuk</span>
+<h3 style="font-size: 30px">Cardio Tenis</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #55625B">Müzik eşliğinde, yüksek tempolu grup antrenmanı. Tenis vuruşlarıyla kardiyo; her seviyeye açık.</p>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Cardio%20Tenis%20grupları%20hakkında%20bilgi%20almak%20istiyorum." style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 48px; margin-top: 6px; font-size: 16px; font-weight: 700; border-bottom: 2px solid #D6E04A">Kayıt için WhatsApp →</a>
+</div>
+</div>
+<div class="lift" style="border-radius: 28px; background: #FFFDF8; border: 1px solid #E3D8C6; overflow: hidden; display: flex; flex-direction: column">
+<div class="ph" style="height: 200px; display: flex; align-items: flex-end; padding: 18px; box-sizing: border-box">
+<span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli · Maç anı</span>
+</div>
+<div style="padding: 32px 36px 36px; display: flex; flex-direction: column; gap: 12px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: {{accent}}">Seviye tespiti ile</span>
+<h3 style="font-size: 30px">Performans &amp; Turnuva</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #55625B">Lisanslı ve turnuva hedefli oyuncular için teknik, taktik ve maç analizi içeren yoğun program.</p>
+<a href="https://wa.me/{{wa}}?text=Merhaba%2C%20Performans%20%26%20Turnuva%20programı%20hakkında%20bilgi%20almak%20istiyorum." style="align-self: flex-start; display: flex; align-items: center; gap: 8px; height: 48px; margin-top: 6px; font-size: 16px; font-weight: 700; border-bottom: 2px solid #D6E04A">Kayıt için WhatsApp →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KORT KİRALAMA -->
+<section id="kiralama" class="pad-m" style="padding: 120px 0; background: rgba(22,56,43,0.95); color: #F3ECE1">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 56px">
+<div class="stack-m" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: #D6E04A">03 — Kort Kiralama</span>
+<h2 class="h2" style="color: #FFFFFF">Kortu ayırtın, <em style="font-style: italic; font-weight: 400">oyuna gelin</em></h2>
+</div>
+<p style="font-size: 18px; line-height: 1.6; color: #C8D5CE; max-width: 440px">Kendi partnerinizle oynamak için saatlik kiralama ya da düzenli oyuncular için paketler. Uygunluk ve detaylar için yazın.</p>
+</div>
+<div class="g3" style="display: grid; gap: 24px">
+<div class="lift" style="padding: 36px; border-radius: 28px; background: #1E4535; border: 1px solid #2F5A48; display: flex; flex-direction: column; gap: 18px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 64px; line-height: 1; color: #D6E04A">1<span style="font-size: 24px"> saat</span></span>
+<h3 style="font-size: 28px; color: #FFFFFF">Saatlik kiralama</h3>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #DDE6E1">
+<span>— 60 dakika toprak kort</span>
+<span>— Soyunma odası kullanımı</span>
+<span>— Raket &amp; top kiralama opsiyonel</span>
+</div>
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%20saatlik%20kort%20kiralamak%20istiyorum.%20Tarih%20ve%20saat%3A%20" style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; margin-top: auto; border-radius: 999px; background: #F3ECE1; color: #10231C; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+Kort Ayırt
+</a>
+</div>
+<div class="lift" style="padding: 36px; border-radius: 28px; background: #D6E04A; color: #10231C; display: flex; flex-direction: column; gap: 18px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 64px; line-height: 1">10<span style="font-size: 24px"> saat</span></span>
+<h3 style="font-size: 28px">Avantajlı paket</h3>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+<span>— 10 × 60 dakika kort kullanımı</span>
+<span>— Öncelikli rezervasyon</span>
+<span>— Dilediğiniz gün ve saatte</span>
+</div>
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%2010%20saatlik%20kort%20kiralama%20paketi%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; margin-top: auto; border-radius: 999px; background: #16382B; color: #FFFFFF; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+Paket Bilgisi Al
+</a>
+</div>
+<div class="lift" style="padding: 36px; border-radius: 28px; background: #1E4535; border: 1px solid #2F5A48; display: flex; flex-direction: column; gap: 18px">
+<span style="font-family: 'Fraunces', Georgia, serif; font-size: 64px; line-height: 1; color: #D6E04A">Her<span style="font-size: 24px"> hafta</span></span>
+<h3 style="font-size: 28px; color: #FFFFFF">Sabit saat üyeliği</h3>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 15px; color: #DDE6E1">
+<span>— Her hafta aynı gün ve saat sizin</span>
+<span>— Aylık 4–5 seans</span>
+<span>— Ek saatlerde öncelik</span>
+</div>
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%20sabit%20saat%20kort%20üyeliği%20hakkında%20bilgi%20almak%20istiyorum." style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 54px; margin-top: auto; border-radius: 999px; background: #F3ECE1; color: #10231C; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+Üyelik Sor
+</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- GALERİ -->
+<section id="galeri" class="pad-m" style="padding: 120px 0">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<div class="stack-m" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<span style="font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; color: {{accent}}">04 — Galeri</span>
+<h2 class="h2">Kortlardan <em style="font-style: italic; font-weight: 400">kareler</em></h2>
+</div>
+<a class="btn" href="https://www.instagram.com/conradtennisclub/" style="display: flex; align-items: center; gap: 10px; height: 52px; padding: 0 24px; border-radius: 999px; border: 1.5px solid #10231C; color: #10231C; font-size: 16px; font-weight: 700">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.3" cy="6.7" r="0.8" fill="currentColor"></circle></svg>
+@conradtennisclub
+</a>
+</div>
+<div class="gal" style="display: grid; gap: 16px">
+<div class="ph tall" style="border-radius: 24px; display: flex; align-items: flex-end; padding: 16px"><span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli 1</span></div>
+<div class="ph wide" style="border-radius: 24px; display: flex; align-items: flex-end; padding: 16px"><span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli 2</span></div>
+<div class="ph" style="border-radius: 24px; display: flex; align-items: flex-end; padding: 16px"><span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli 3</span></div>
+<div class="ph" style="border-radius: 24px; display: flex; align-items: flex-end; padding: 16px"><span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli 4</span></div>
+<div class="ph" style="border-radius: 24px; display: flex; align-items: flex-end; padding: 16px"><span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli 5</span></div>
+<div class="ph tall" style="border-radius: 24px; display: flex; align-items: flex-end; padding: 16px"><span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli 6</span></div>
+<div class="ph wide" style="border-radius: 24px; display: flex; align-items: flex-end; padding: 16px"><span style="padding: 6px 12px; border-radius: 999px; background: rgba(255,253,248,.92); font-size: 12px; font-weight: 700; color: #16382B">Instagram görseli 7</span></div>
+</div>
+</div>
+</section>
+
+<!-- NASIL ÇALIŞIR -->
+<section class="pad-m" style="padding: 40px 0 120px">
+<div class="wrap" style="display: flex; flex-direction: column; gap: 48px">
+<h2 class="h2" style="text-align: center">Üç adımda <em style="font-style: italic; font-weight: 400; color: {{accent}}">kortta</em></h2>
+<div class="g3" style="display: grid; gap: 24px">
+<div style="padding: 32px; border-radius: 28px; background: rgba(255,253,248,.85); border: 1px solid #E3D8C6; display: flex; flex-direction: column; gap: 12px">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #D6E04A; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 600">1</span>
+<h3 style="font-size: 26px">Seçin</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #55625B">Özel ders, eğitim programı ya da kort kiralama — size uygun olanı bulun.</p>
+</div>
+<div style="padding: 32px; border-radius: 28px; background: rgba(255,253,248,.85); border: 1px solid #E3D8C6; display: flex; flex-direction: column; gap: 12px">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #D6E04A; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 600">2</span>
+<h3 style="font-size: 26px">WhatsApp'tan yazın</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #55625B">Butona dokunun; mesajınız hazır gelir. Gönderin, uygun saatleri paylaşalım.</p>
+</div>
+<div style="padding: 32px; border-radius: 28px; background: rgba(255,253,248,.85); border: 1px solid #E3D8C6; display: flex; flex-direction: column; gap: 12px">
+<span style="width: 52px; height: 52px; border-radius: 50%; background: #D6E04A; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', Georgia, serif; font-size: 24px; font-weight: 600">3</span>
+<h3 style="font-size: 26px">Kortta buluşalım</h3>
+<p style="font-size: 16px; line-height: 1.6; color: #55625B">Saatiniz onaylanır; raketinizi alın ve gelin.</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="iletisim" style="padding: 0 0 100px">
+<div class="wrap g2" style="display: grid; gap: 24px">
+<div style="padding: 56px; border-radius: 36px; background: {{accent}}; color: #FFFFFF; display: flex; flex-direction: column; justify-content: space-between; gap: 40px; position: relative; overflow: hidden">
+<svg style="position: absolute; right: -60px; top: -60px" width="260" height="260" viewBox="0 0 40 40" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" stroke="rgba(255,255,255,.22)" stroke-width="1.2"></circle><path d="M6 12c8 4 8 12 0 16" stroke="rgba(255,255,255,.22)" stroke-width="1.2"></path><path d="M34 12c-8 4-8 12 0 16" stroke="rgba(255,255,255,.22)" stroke-width="1.2"></path></svg>
+<h2 class="h2" style="color: #FFFFFF; position: relative">Sorunuz mu var? <em style="font-style: italic; font-weight: 400">Bir mesaj</em> uzağınızdayız.</h2>
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%20Conrad%20Tennis%20Club%20hakkında%20bilgi%20almak%20istiyorum." style="position: relative; align-self: flex-start; display: flex; align-items: center; gap: 12px; height: 62px; padding: 0 32px; border-radius: 999px; background: #FFFFFF; color: #10231C; font-size: 17px; font-weight: 700">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+WhatsApp'tan Yazın
+</a>
+</div>
+<div style="padding: 56px; border-radius: 36px; background: #FFFDF8; border: 1px solid #E3D8C6; display: flex; flex-direction: column; gap: 32px; justify-content: center">
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #55625B">Adres</span>
+<span style="font-size: 18px; line-height: 1.5; font-weight: 600">Conrad Istanbul Bosphorus<br>Cihannüma Mah., Beşiktaş, İstanbul</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #55625B">Telefon / WhatsApp</span>
+<a href="tel:+905335712858" style="font-size: 18px; font-weight: 700">+90 533 571 28 58</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #55625B">Instagram</span>
+<a href="https://www.instagram.com/conradtennisclub/" style="font-size: 18px; font-weight: 700">@conradtennisclub</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #10231C; color: #AFBDB6">
+<div class="wrap stack-m" style="min-height: 96px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-size: 14px; padding-top: 24px; padding-bottom: 24px">
+<span>© 2026 Conrad Tennis Club · Beşiktaş, İstanbul</span>
+<div style="display: flex; gap: 24px; flex-wrap: wrap">
+<a href="#dersler" style="color: #E3EBE7">Dersler</a>
+<a href="#egitimler" style="color: #E3EBE7">Eğitimler</a>
+<a href="#kiralama" style="color: #E3EBE7">Kort Kiralama</a>
+<a href="https://www.instagram.com/conradtennisclub/" style="color: #E3EBE7">Instagram</a>
+</div>
+</div>
+</footer>
+
+</div>
+
+<!-- SABİT WHATSAPP BUTONU -->
+<a class="btn" href="https://wa.me/{{wa}}?text=Merhaba%2C%20Conrad%20Tennis%20Club%20hakkında%20bilgi%20almak%20istiyorum." aria-label="WhatsApp'tan yazın" style="position: fixed; right: 24px; bottom: 24px; z-index: 20; width: 64px; height: 64px; border-radius: 50%; background: #16382B; color: #D6E04A; display: flex; align-items: center; justify-content: center; box-shadow: 0 14px 34px rgba(16,35,28,.35)">
+<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20.5l1.3-4A8.5 8.5 0 1 1 8 19.6z"></path><path d="M9.3 8.4c.3-.4.9-.4 1.1 0l.7 1.5c.1.3 0 .6-.2.8l-.5.4c.6 1.2 1.5 2.1 2.7 2.7l.4-.5c.2-.2.5-.3.8-.2l1.5.7c.4.2.4.8 0 1.1-.7.6-1.8.8-3.2.1a8 8 0 0 1-3.6-3.6c-.6-1.3-.4-2.4.3-3z"></path></svg>
+</a>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#B4522D","options":["#B4522D","#C0673A","#9C3F22","#16382B"]},"wa":{"editor":"text","default":"905335712858"},"rally":{"editor":"range","default":760,"min":400,"max":1400,"step":20,"unit":"px"},"$preview":{"width":1440,"height":6000}}'>
+class Component extends DCLogic {
+componentDidMount() {
+this.tgt = null;
+this.reduce = !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+this.measure = () => {
+if (this.raf) return;
+this.raf = requestAnimationFrame(() => {
+this.raf = null;
+const se = document.scrollingElement || document.documentElement;
+let y = window.scrollY || (se ? se.scrollTop : 0) || 0;
+if (this.tgt && this.tgt.scrollTop > y) y = this.tgt.scrollTop;
+this.setState({ y: y, vw: window.innerWidth || 1440, vh: Math.min(window.innerHeight || 900, 1000) });
+});
+};
+this.onCapture = (e) => {
+const t = e.target;
+if (t && t.nodeType === 1 && t.scrollHeight > t.clientHeight) this.tgt = t;
+this.measure();
+};
+window.addEventListener('scroll', this.measure, { passive: true });
+document.addEventListener('scroll', this.onCapture, { passive: true, capture: true });
+window.addEventListener('resize', this.measure);
+this.measure();
+}
+componentWillUnmount() {
+window.removeEventListener('scroll', this.measure);
+document.removeEventListener('scroll', this.onCapture, { capture: true });
+window.removeEventListener('resize', this.measure);
+if (this.raf) cancelAnimationFrame(this.raf);
+}
+angleAt(f) {
+if (f < 0.42) return -25 - 30 * (f / 0.42);
+if (f < 0.56) { const t = (f - 0.42) / 0.14; return -55 + 125 * (1 - Math.pow(1 - t, 3)); }
+const t = (f - 0.56) / 0.44;
+return 70 - 95 * t;
+}
+renderVals() {
+const st = this.state || {};
+const vw = st.vw || 1440;
+const vh = st.vh || 900;
+const y = this.reduce ? 0 : (st.y || 0);
+const rally = Math.max(200, Number(this.props.rally) || 760);
+const s = Math.max(0.5, Math.min(1, vw / 1300));
+const p = y / rally;
+const f = p - Math.floor(p);
+const a = this.angleAt(f);
+const px = vw * 0.07, py = vh * 0.97;
+const a0 = this.angleAt(0.5) * Math.PI / 180;
+const cx = px + 375 * s * Math.sin(a0) + 26 * s;
+const cy = py - 375 * s * Math.cos(a0);
+const sx = vw * 0.97, sy = vh * 0.18, ex = vw * 0.99, ey = vh * 0.1, hp = vh * 0.22;
+let bx, by;
+if (f < 0.5) { const t = f / 0.5; bx = sx + (cx - sx) * t; by = sy + (cy - sy) * t - hp * Math.sin(Math.PI * t); }
+else { const t = (f - 0.5) / 0.5; bx = cx + (ex - cx) * t; by = cy + (ey - cy) * t - hp * 1.25 * Math.sin(Math.PI * t); }
+const flash = Math.max(0, 1 - Math.abs(f - 0.5) / 0.06);
+return {
+accent: this.props.accent ?? '#B4522D',
+wa: String(this.props.wa ?? '905335712858').replace(/\D/g, ''),
+rx: (px - 100).toFixed(1),
+ry: (py - 510).toFixed(1),
+ra: a.toFixed(2),
+rs: s.toFixed(3),
+bx: (bx - 22).toFixed(1),
+by: (by - 22).toFixed(1),
+spin: (p * 540).toFixed(1),
+fx: (cx - 40).toFixed(1),
+fy: (cy - 40).toFixed(1),
+fo: flash.toFixed(2),
+fsc: (0.6 + 0.9 * (1 - flash)).toFixed(2)
+};
+}
+}
+</script>
+</body>
+</html>
