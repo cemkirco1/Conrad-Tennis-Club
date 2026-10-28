@@ -20,3 +20,7 @@ Canlı canvas (v2): https://claude.ai/artifact/5GKQroo7m1Em9BHZt3Q7cJ
 ## React sitesi
 
 `web/` klasöründe v2 tasarımının Vite + React ile yazılmış, yayına hazır hali var. Detaylar: [web/README.md](web/README.md)
+
+## Tasarım araçları
+
+`.claude/skills/` altında iki tasarım skill'i projeye dahil: [taste-skill](https://github.com/leonxlnx/taste-skill) (MIT) ve [impeccable](https://github.com/pbakaus/impeccable) (Apache-2.0). Sürümler `.claude/skills/SOURCES.md` içinde. Ürün ve tasarım bağlamı: `PRODUCT.md`, `DESIGN.md`.

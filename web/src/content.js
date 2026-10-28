@@ -1,8 +1,9 @@
-// Sitedeki tüm metinler ve WhatsApp mesajları burada; içerik değişiklikleri için tek yer.
+// Sitedeki tüm metinler, seçenekler ve WhatsApp mesajları burada; içerik değişiklikleri için tek yer.
 
 export const WHATSAPP_NUMBER = '905335712858';
 export const PHONE_DISPLAY = '+90 533 571 28 58';
 export const INSTAGRAM_URL = 'https://www.instagram.com/conradtennisclub/';
+export const MAPS_URL = 'https://www.google.com/maps/search/?api=1&query=Conrad+Istanbul+Bosphorus';
 
 export const waLink = (message) =>
   `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -12,113 +13,136 @@ export const GENERAL_MESSAGE = 'Merhaba, Conrad Tennis Club hakkında bilgi alma
 export const NAV = [
   { href: '#dersler', label: 'Dersler' },
   { href: '#egitimler', label: 'Eğitimler' },
-  { href: '#kiralama', label: 'Kort Kiralama' },
-  { href: '#galeri', label: 'Galeri' },
-  { href: '#iletisim', label: 'İletişim' },
+  { href: '#kiralama', label: 'Kort kiralama' },
+  { href: '#mesaj', label: 'Randevu' },
 ];
 
 export const LESSONS = [
   {
-    icon: 'single',
     title: 'Bireysel ders',
-    text: 'Antrenörünüzle birebir, tamamen size odaklı 60 dakika. Teknikte en hızlı ilerleme.',
-    tags: ['1 kişi', '60 dk', "8 / 12'li paket"],
+    text: 'Antrenörünüzle birebir, tamamen size odaklı bir saat. Teknikte en hızlı ilerleme.',
+    facts: ['1 kişi', '60 dakika', "8 ya da 12'li paket"],
     message: 'Merhaba, bireysel özel ders hakkında bilgi almak istiyorum.',
   },
   {
-    icon: 'pair',
     title: 'İki kişilik ders',
-    text: 'Eşiniz, arkadaşınız ya da çocuğunuzla birlikte. Aynı kortta, aynı antrenörle, oyun keyfi ikiye katlanır.',
-    tags: ['2 kişi', '60 dk', "8 / 12'li paket"],
+    text: 'Eşiniz, arkadaşınız ya da çocuğunuzla aynı kortta, aynı antrenörle. En çok tercih edilen ders.',
+    facts: ['2 kişi', '60 dakika', "8 ya da 12'li paket"],
     message: 'Merhaba, iki kişilik ders hakkında bilgi almak istiyorum.',
-    featured: true,
   },
   {
-    icon: 'group',
     title: 'Grup dersi',
-    text: 'Aynı seviyedeki 3–4 oyuncuyla, maç temposunda keyifli antrenman ve yeni oyun arkadaşları.',
-    tags: ['3–4 kişi', '90 dk', 'Aylık program'],
+    text: 'Aynı seviyedeki üç ya da dört oyuncuyla, maç temposunda antrenman ve yeni oyun arkadaşları.',
+    facts: ['3–4 kişi', '90 dakika', 'Aylık program'],
     message: 'Merhaba, grup dersleri hakkında bilgi almak istiyorum.',
   },
 ];
 
 export const PROGRAMS = [
   {
-    eyebrow: '4–14 yaş',
     title: 'Çocuk Tenis Akademisi',
-    text: 'Mini tenis ile başlayan; koordinasyonu, özgüveni ve oyun sevgisini geliştiren yaş gruplu eğitim.',
+    who: '4–14 yaş',
+    text: 'Mini tenis ile başlayan; koordinasyonu, özgüveni ve oyun sevgisini geliştiren yaş gruplu eğitim. Hafta içi akşam ve hafta sonu sabah grupları.',
     image: '/img/cocuk-mini-tenis.svg',
-    alt: 'Mini tenis için koniler ve toplar',
+    alt: 'Toprak kortta mini tenis konileri ve renkli toplar',
     message: 'Merhaba, Çocuk Tenis Akademisi hakkında bilgi almak istiyorum.',
   },
   {
-    eyebrow: '8 hafta',
     title: 'Yetişkin Başlangıç',
+    who: '8 hafta',
     text: 'Hiç oynamamış ya da yıllar sonra kortlara dönenler için temel vuruşlar, oyun kuralları ve ilk maçlar.',
     image: '/img/file-top.svg',
     alt: 'Filenin üzerinden geçen tenis topu',
     message: 'Merhaba, Yetişkin Başlangıç programı hakkında bilgi almak istiyorum.',
   },
   {
-    eyebrow: 'Yetişkin & çocuk',
     title: 'Cardio Tenis',
+    who: 'Yetişkin ve çocuk grupları',
     text: 'Müzik eşliğinde, yüksek tempolu grup antrenmanı. Tenis vuruşlarıyla kardiyo; her seviyeye açık.',
     image: '/img/cardio.svg',
-    alt: 'Hızlı hareket eden tenis topu izleri',
+    alt: 'Kortta hızla süzülen tenis topunun izleri',
     message: 'Merhaba, Cardio Tenis grupları hakkında bilgi almak istiyorum.',
   },
   {
-    eyebrow: 'Seviye tespiti ile',
-    title: 'Performans & Turnuva',
+    title: 'Performans ve turnuva',
+    who: 'Seviye tespitiyle',
     text: 'Lisanslı ve turnuva hedefli oyuncular için teknik, taktik ve maç analizi içeren yoğun program.',
     image: '/img/kort-ustten.svg',
     alt: 'Üstten görünen toprak tenis kortu',
-    message: 'Merhaba, Performans & Turnuva programı hakkında bilgi almak istiyorum.',
+    message: 'Merhaba, Performans ve turnuva programı hakkında bilgi almak istiyorum.',
   },
 ];
 
 export const RENTALS = [
   {
-    big: '1',
-    unit: 'saat',
+    area: 'single',
     title: 'Saatlik kiralama',
-    items: ['60 dakika toprak kort', 'Soyunma odası kullanımı', 'Raket & top kiralama opsiyonel'],
-    cta: 'Kort Ayırt',
+    lead: 'Bir saat, bir kort',
+    items: ['60 dakika toprak kort', 'Soyunma odası', 'İsterseniz raket ve top'],
+    cta: 'Kort ayırt',
     message: 'Merhaba, saatlik kort kiralamak istiyorum. Tarih ve saat: ',
   },
   {
-    big: '10',
-    unit: 'saat',
-    title: 'Avantajlı paket',
-    items: ['10 × 60 dakika kort kullanımı', 'Öncelikli rezervasyon', 'Dilediğiniz gün ve saatte'],
-    cta: 'Paket Bilgisi Al',
+    area: 'pack',
+    title: '10 saatlik paket',
+    lead: 'Dilediğiniz gün ve saatte',
+    items: ['10 × 60 dakika kort', 'Öncelikli rezervasyon', 'Partnerinizle ya da arkadaş grubunuzla'],
+    cta: 'Paketi sor',
     message: 'Merhaba, 10 saatlik kort kiralama paketi hakkında bilgi almak istiyorum.',
-    highlight: true,
   },
   {
-    big: 'Her',
-    unit: 'hafta',
+    area: 'member',
     title: 'Sabit saat üyeliği',
-    items: ['Her hafta aynı gün ve saat sizin', 'Aylık 4–5 seans', 'Ek saatlerde öncelik'],
-    cta: 'Üyelik Sor',
+    lead: 'Her hafta aynı gün, aynı saat',
+    items: ['Ayda 4–5 seans', 'Ek saatlerde öncelik'],
+    cta: 'Üyeliği sor',
     message: 'Merhaba, sabit saat kort üyeliği hakkında bilgi almak istiyorum.',
   },
 ];
 
 export const GALLERY = [
-  { src: '/img/kort-perspektif.svg', alt: 'Ağaçlarla çevrili toprak tenis kortu', size: 'tall' },
-  { src: '/img/kort-ustten.svg', alt: 'Üstten görünen toprak tenis kortu', size: 'wide' },
-  { src: '/img/top-sepeti.svg', alt: 'Tenis topu sepeti' },
-  { src: '/img/raket-toplar.svg', alt: 'Toprak kortta raket ve tenis topları' },
-  { src: '/img/file-top.svg', alt: 'Filenin üzerinden geçen tenis topu' },
-  { src: '/img/cardio.svg', alt: 'Hızlı hareket eden tenis topu izleri', size: 'tall' },
-  { src: '/img/cocuk-mini-tenis.svg', alt: 'Mini tenis için koniler ve toplar', size: 'wide' },
+  { src: '/img/kort-perspektif.svg', alt: 'Ağaçlarla çevrili toprak tenis kortu', caption: 'Ağaçların arasında kort' },
+  { src: '/img/raket-toplar.svg', alt: 'Toprak kortta raket ve tenis topları', caption: 'Ders arası' },
+  { src: '/img/kort-ustten.svg', alt: 'Üstten görünen toprak tenis kortu', caption: 'Kortun planı' },
+  { src: '/img/top-sepeti.svg', alt: 'Tenis topu sepeti', caption: 'Antrenman sepeti' },
+  { src: '/img/file-top.svg', alt: 'Filenin üzerinden geçen tenis topu', caption: 'Fileden geçiş' },
+  { src: '/img/cocuk-mini-tenis.svg', alt: 'Mini tenis konileri ve toplar', caption: 'Çocuk grubu kurulumu' },
+  { src: '/img/cardio.svg', alt: 'Hızla süzülen tenis topunun izleri', caption: 'Cardio tenis' },
 ];
 
-export const STEPS = [
-  { title: 'Seçin', text: 'Özel ders, eğitim programı ya da kort kiralama — size uygun olanı bulun.' },
-  { title: "WhatsApp'tan yazın", text: 'Butona dokunun; mesajınız hazır gelir. Gönderin, uygun saatleri paylaşalım.' },
-  { title: 'Kortta buluşalım', text: 'Saatiniz onaylanır; raketinizi alın ve gelin.' },
-];
+export const MARQUEE = ['Özel ders', 'Çocuk akademisi', 'Cardio tenis', 'Kort kiralama', 'Turnuva hazırlığı'];
 
-export const MARQUEE = ['Özel Ders', 'Çocuk Akademisi', 'Cardio Tenis', 'Kort Kiralama', 'Turnuva Hazırlık'];
+// Randevu mesajı oluşturucu
+export const COMPOSER = {
+  kinds: [
+    {
+      id: 'ders',
+      label: 'Özel ders',
+      options: ['Bireysel ders', 'İki kişilik ders', 'Grup dersi'],
+      sentence: (o) => `Conrad Tennis Club'da ${o.toLocaleLowerCase('tr-TR')} almak istiyorum.`,
+    },
+    {
+      id: 'egitim',
+      label: 'Eğitim programı',
+      options: ['Çocuk Tenis Akademisi', 'Yetişkin Başlangıç', 'Cardio Tenis', 'Performans ve turnuva'],
+      sentence: (o) => `Conrad Tennis Club'daki ${o} için kayıt yaptırmak istiyorum.`,
+    },
+    {
+      id: 'kort',
+      label: 'Kort kiralama',
+      options: ['Saatlik kiralama', '10 saatlik paket', 'Sabit saat üyeliği'],
+      sentence: (o) =>
+        o === 'Saatlik kiralama'
+          ? "Conrad Tennis Club'da saatlik kort kiralamak istiyorum."
+          : `Conrad Tennis Club'ın ${o.toLocaleLowerCase('tr-TR')} seçeneği hakkında bilgi almak istiyorum.`,
+    },
+  ],
+  times: ['Hafta içi sabah', 'Hafta içi akşam', 'Hafta sonu', 'Fark etmez'],
+};
+
+export function composeMessage({ kind, option, time, name }) {
+  const k = COMPOSER.kinds.find((x) => x.id === kind) ?? COMPOSER.kinds[0];
+  const greeting = name?.trim() ? `Merhaba, ben ${name.trim()}.` : 'Merhaba.';
+  const when = time === 'Fark etmez' ? 'Gün ve saat konusunda esneğim.' : `${time} benim için uygun.`;
+  return `${greeting} ${k.sentence(option)} ${when} Müsaitlik bilgisi alabilir miyim?`;
+}

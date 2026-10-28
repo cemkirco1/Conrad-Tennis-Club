@@ -14,9 +14,15 @@ npm run preview   # build'i yerelde önizle
 
 `dist/` klasörü herhangi bir statik hostinge (Netlify, Vercel, GitHub Pages, cPanel) yüklenebilir.
 
+## Kütüphaneler
+
+- **GSAP** (`gsap`, `@gsap/react`): ScrollTrigger ve SplitText ile kaydırma hareketleri. Ayarlar `src/lib/gsap.js` ve `src/lib/motion.js` içinde.
+- **three.js** (`three`): arka plandaki 3D raketler, top ve kil tozu — `src/three/rally.js`. Ayrı bir parça olarak yüklenir, ilk ekranı bekletmez. WebGL yoksa sayfa sahnesiz çalışır.
+- **Archivo** (`@fontsource-variable/archivo`): yazı tipi kendi sunucumuzdan gelir.
+
 ## İçerik nerede?
 
-- `src/content.js` — WhatsApp numarası, telefon, Instagram, tüm ders/eğitim/kiralama kartları ve hazır WhatsApp mesajları.
-- `public/img/` — görseller (şimdilik dummy illüstrasyonlar; gerçek fotoğrafları buraya koyup `content.js` ve `Hero.jsx` içindeki yolları güncelleyin).
-- `src/components/RallyBackground.jsx` — kaydırdıkça topa vuran iki raketlik arka plan animasyonu (`RALLY_PX` ile hızı ayarlanır).
-- `src/styles.css` — renkler (`:root` değişkenleri) ve mobil uyum.
+- `src/content.js` — WhatsApp numarası, telefon, Instagram, ders/eğitim/kiralama metinleri, randevu mesajı seçenekleri ve hazır mesajlar.
+- `public/img/` — görseller (şimdilik temsilî çizimler; gerçek fotoğrafları buraya koyup `content.js` içindeki yolları güncelleyin).
+- `src/three/rally.js` — `RALLY_PX` bir gidiş-dönüşün kaydırma mesafesi, `PHASE` sayfa açıldığında topun yeri.
+- `src/styles.css` — renk ve yazı tokenları (`:root`), mobil uyum. Tasarım kararları: repo kökündeki `DESIGN.md`.

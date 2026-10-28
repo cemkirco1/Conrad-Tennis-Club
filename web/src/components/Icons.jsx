@@ -1,7 +1,7 @@
 const stroke = {
   fill: 'none',
   stroke: 'currentColor',
-  strokeWidth: 1.7,
+  strokeWidth: 1.8,
   strokeLinecap: 'round',
   strokeLinejoin: 'round',
   'aria-hidden': true,
@@ -26,41 +26,20 @@ export function InstagramIcon({ size = 20 }) {
   );
 }
 
-export function BallLogo({ size = 38 }) {
+export function ArrowIcon({ size = 20 }) {
   return (
-    <svg width={size} height={size} viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <circle cx="20" cy="20" r="18" fill="#D6E04A" stroke="#16382B" strokeWidth="2" />
-      <path d="M6 12c8 4 8 12 0 16" stroke="#16382B" strokeWidth="2" />
-      <path d="M34 12c-8 4-8 12 0 16" stroke="#16382B" strokeWidth="2" />
+    <svg width={size} height={size} viewBox="0 0 24 24" {...stroke}>
+      <path d="M5 12h14M13 6l6 6-6 6" />
     </svg>
   );
 }
 
-export function PeopleIcon({ kind }) {
+export function BallLogo({ size = 32 }) {
   return (
-    <svg width="26" height="26" viewBox="0 0 24 24" {...stroke}>
-      {kind === 'single' && (
-        <>
-          <circle cx="12" cy="7" r="4" />
-          <path d="M4 21c1-4 4.5-6 8-6s7 2 8 6" />
-        </>
-      )}
-      {kind === 'pair' && (
-        <>
-          <circle cx="8" cy="8" r="3.2" />
-          <circle cx="16.5" cy="8" r="3.2" />
-          <path d="M2 20c.7-3.2 3-5 6-5s5.3 1.8 6 5" />
-          <path d="M14.5 15.2c.6-.1 1.3-.2 2-.2 3 0 5.3 1.8 6 5" />
-        </>
-      )}
-      {kind === 'group' && (
-        <>
-          <circle cx="6" cy="9" r="2.6" />
-          <circle cx="12" cy="7" r="2.6" />
-          <circle cx="18" cy="9" r="2.6" />
-          <path d="M2 19c.5-2.5 2-4 4-4M22 19c-.5-2.5-2-4-4-4M7.5 20c.6-3 2.4-5 4.5-5s3.9 2 4.5 5" />
-        </>
-      )}
+    <svg width={size} height={size} viewBox="0 0 40 40" fill="none" aria-hidden="true">
+      <circle cx="20" cy="20" r="18" fill="#D8EC3E" stroke="#0F2A21" strokeWidth="2.2" />
+      <path d="M6 12c8 4 8 12 0 16" stroke="#0F2A21" strokeWidth="2.2" />
+      <path d="M34 12c-8 4-8 12 0 16" stroke="#0F2A21" strokeWidth="2.2" />
     </svg>
   );
 }
